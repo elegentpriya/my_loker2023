@@ -1,0 +1,50 @@
+/*Create a database named School and perform all the DDL commands(CREATE, ALTER, DROP, 
+RENAME,TRUNCATE) for the table named STUDENT with fields: 
+ Roll.No 
+ Name 
+ Marks 
+ Grade */
+CREATE DATABASE SCHOOL;
+USE SCHOOL;
+CREATE TABLE STUDENTS(ROLL_NO INT PRIMARY KEY,FNAME VARCHAR(30),LNAME VARCHAR(30),MARKS INT ,GRADES VARCHAR(2));
+
+
+/*Insert 10 rows into the table using INSERT INTO.*/ 
+INSERT INTO STUDENTS VALUE(1,'RAM','NATH',98,'A');
+INSERT INTO STUDENTS VALUE(2,'RAVI','VARMA',75,'C');
+INSERT INTO STUDENTS VALUE(3,'PRAM','PRASED',35,'E');
+INSERT INTO STUDENTS VALUE(4,'RAJ','ALOK',88,'B');
+INSERT INTO STUDENTS VALUE(5,'ANAGHA','PRABHKER',99,'A');
+INSERT INTO STUDENTS VALUE(6,'SHOBH','REVIDHRAN',66,'D');
+INSERT INTO STUDENTS VALUE(7,'MARIN','MARTIN',75,'c');
+INSERT INTO STUDENTS VALUE(8,'MADHU','NAIR',87,'B');
+INSERT INTO STUDENTS VALUE(9,'ADIJITH','PRAKESH',98,'A');
+INSERT INTO STUDENTS VALUE(10,'RAM','RAJESH',55,'D');
+
+
+/*Use select command to display the table.*/ 
+SELECT * FROM STUDENTS;
+
+
+
+/*Add a column named Contact to the STUDENT table.*/
+ALTER TABLE STUDENTS ADD COLUMN (CONTACT INT); 
+
+/*Remove Grade column from Student table .*/
+ ALTER TABLE STUDENTS DROP COLUMN GRADES;
+ 
+ 
+ /*Rename the table to CLASSTEN.*/
+ RENAME TABLE STUDENTS TO CLASSTEN;
+ 
+ 
+ /*Delete all rows from the table.*/
+ TRUNCATE TABLE CLASSTEN;
+ desc CLASSTEN;
+ 
+ 
+/* Remove the table from the database.*/
+DROP TABLE CLASSTEN; 
+ 
+
+ 
